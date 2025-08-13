@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVA · Unidad 1: My Routine · Presente simple para describir rutinas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'Poppins',sans-serif}
+    .sidebar-link{transition:all .3s;border-left:4px solid transparent}
+    .sidebar-link.active,.sidebar-link:hover{background:#e6f4ea;color:#166534;border-left-color:#22c55e}
+    .content-pane{display:none;animation:fadeIn .45s ease-in-out}
+    .content-pane.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    .quiz-option:hover{background:#f0fdf4}
+    .quiz-option.selected{background:#dcfce7;border-color:#22c55e}
+    .type-card{transition:transform .3s,box-shadow .3s}
+    .type-card:hover{transform:scale(1.05);box-shadow:0 4px 6px -1px rgb(0 0 0 /.1),0 2px 4px -2px rgb(0 0 0 /.1)}
+    .kbd{border:1px solid #cbd5e1;border-bottom-width:2px;padding:.1rem .35rem;border-radius:.25rem;font-size:.85rem;background:#f8fafc}
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg flex-shrink-0 hidden md:flex md:flex-col">
+      <div class="p-6 bg-green-800 text-white">
+        <h1 class="text-lg font-bold text-center leading-tight">OVA · Inglés Técnico I<br><span class="text-green-200">Unidad 1: My Routine</span></h1>
+        <p class="text-xs text-green-100 text-center mt-1">Presente simple para describir rutinas</p>
+      </div>
+      <nav class="mt-4 flex-1">
+        <a href="#" class="sidebar-link active flex items-center py-3 px-6 font-medium text-slate-700" data-target="introduccion"><span class="mr-3 text-xl">🚀</span>Introducción</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="objetivos"><span class="mr-3 text-xl">🎯</span>Objetivos</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="fundamentos"><span class="mr-3 text-xl">📚</span>Fundamentos</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="tipos"><span class="mr-3 text-xl">🛠️</span>Práctica y Herramientas</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="beneficios"><span class="mr-3 text-xl">🌟</span>Beneficios</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="actividades"><span class="mr-3 text-xl">✍️</span>Actividades</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="evaluacion"><span class="mr-3 text-xl">✔️</span>Evaluación</a>
+        <a href="#" class="sidebar-link flex items-center py-3 px-6 font-medium text-slate-700" data-target="lecturas"><span class="mr-3 text-xl">📖</span>Bibliografía</a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1 p-4 sm:p-6 md:p-10 bg-gray-50">
+      <!-- Mobile -->
+      <div class="md:hidden mb-6">
+        <h1 class="text-xl font-bold text-green-800">Unidad 1: My Routine</h1>
+        <select id="mobile-nav" class="w-full mt-2 p-2 border rounded-md bg-white shadow-sm">
+          <option value="introduccion">🚀 Introducción</option>
+          <option value="objetivos">🎯 Objetivos</option>
+          <option value="fundamentos">📚 Fundamentos</option>
+          <option value="tipos">🛠️ Práctica y Herramientas</option>
+          <option value="beneficios">🌟 Beneficios</option>
+          <option value="actividades">✍️ Actividades</option>
+          <option value="evaluacion">✔️ Evaluación</option>
+          <option value="lecturas">📖 Bibliografía</option>
+        </select>
+      </div>
+
+      <!-- Introducción -->
+      <section id="introduccion" class="content-pane active">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-4">Introducción</h2>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          El <strong>presente simple</strong> permite expresar acciones habituales, horarios y verdades generales. Es clave para comunicar con claridad qué haces cada día: qué haces, a qué hora, y con qué frecuencia.
+        </p>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          En el campo de la <strong>programación web</strong>, describir rutinas es fundamental para coordinar stand-ups, reportes de avance y tareas diarias. Ejemplos: <em>I start work at 9 a.m.</em>, <em>She checks her email every morning.</em>
+        </p>
+        <div class="mt-6 p-4 sm:p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+          <p class="text-green-800">
+            Contexto local (Berástegui, Lorica y Sahagún): “I take the bus to Sahagún at 7:00 a.m.”, “I check my emails before class in Lorica”, “I code in the afternoon at home in Berástegui”.
+          </p>
+        </div>
+      </section>
+
+      <!-- Objetivos -->
+      <section id="objetivos" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Objetivos de aprendizaje</h2>
+        <ul class="space-y-4">
+          <li class="bg-white p-4 rounded-lg shadow-sm"><strong>General:</strong> Comprender y aplicar el presente simple para describir rutinas personales, académicas y laborales.</li>
+          <li class="bg-white p-4 rounded-lg shadow-sm"><strong>Específico 1:</strong> Reconocer la estructura afirmativa, negativa e interrogativa.</li>
+          <li class="bg-white p-4 rounded-lg shadow-sm"><strong>Específico 2:</strong> Usar correctamente la 3.ª persona (he/she/it) y expresiones de frecuencia.</li>
+          <li class="bg-white p-4 rounded-lg shadow-sm"><strong>Específico 3:</strong> Describir la rutina propia mediante producción escrita y oral.</li>
+        </ul>
+      </section>
+
+      <!-- Fundamentos -->
+      <section id="fundamentos" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Fundamentos</h2>
+        <div class="space-y-6 text-slate-700 leading-relaxed">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-green-700 mb-2">Usos del presente simple</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Rutinas y hábitos: <em>I go to bed at 10 p.m.</em></li>
+              <li>Hechos generales: <em>The sun rises in the east.</em></li>
+              <li>Horarios y programas: <em>Class starts at 8 a.m.</em></li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-green-700 mb-2">Estructuras</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="font-semibold">Afirmativa</p>
+                <p><span class="kbd">I/You/We/They</span> + verbo base → <em>I study every day.</em></p>
+                <p><span class="kbd">He/She/It</span> + verbo+s/es → <em>She studies at night.</em></p>
+              </div>
+              <div>
+                <p class="font-semibold">Negativa</p>
+                <p><span class="kbd">I/You/We/They</span> + do not (don’t) + verbo → <em>They don’t like coffee.</em></p>
+                <p><span class="kbd">He/She/It</span> + does not (doesn’t) + verbo → <em>He doesn’t work on Sundays.</em></p>
+                <p class="text-sm text-slate-500 mt-1">Cuando usamos <em>doesn’t</em>, el verbo va en forma base: <em>He doesn’t play</em>.</p>
+              </div>
+            </div>
+            <div class="mt-3">
+              <p class="font-semibold">Interrogativa</p>
+              <p><span class="kbd">Do</span>/<span class="kbd">Does</span> + sujeto + verbo base? → <em>Do you study in Sahagún?</em> / <em>Does she like tea?</em></p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-green-700 mb-2">Reglas de 3.ª persona (he/she/it)</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Añadir <strong>-s</strong>: <em>work → works</em>, <em>play → plays</em></li>
+              <li>Añadir <strong>-es</strong> (terminaciones -ch, -sh, -ss, -x, -o): <em>go → goes</em>, <em>watch → watches</em>, <em>fix → fixes</em>, <em>wash → washes</em></li>
+              <li>Consonante + <em>y</em> → <strong>-ies</strong>: <em>study → studies</em>, <em>carry → carries</em> (pero <em>play → plays</em>)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-green-700 mb-2">Vocabulario de rutina</h3>
+            <p>wake up, get up, take a shower, have breakfast/lunch/dinner, get dressed, check emails, attend meetings, code, take notes, study, submit assignments, go to bed.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Práctica y Herramientas -->
+      <section id="tipos" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Práctica y herramientas</h2>
+        <p class="text-slate-700 mb-4">Herramientas ligeras que funcionan bien con conectividad variable en Berástegui, Lorica y Sahagún.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="type-card bg-white p-4 rounded-lg shadow-sm text-center">
+            <p class="text-4xl">🎧</p>
+            <p class="font-bold mt-2">Pronunciación</p>
+            <p class="text-sm text-green-700">Cambridge Dictionary (audios)</p>
+          </div>
+          <div class="type-card bg-white p-4 rounded-lg shadow-sm text-center">
+            <p class="text-4xl">🎬</p>
+            <p class="font-bold mt-2">Video explicativo</p>
+            <p class="text-sm text-green-700">HeyGen (avatar docente)</p>
+          </div>
+          <div class="type-card bg-white p-4 rounded-lg shadow-sm text-center">
+            <p class="text-4xl">🧠</p>
+            <p class="font-bold mt-2">Quizzes</p>
+            <p class="text-sm text-green-700">H5P / Quizizz</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beneficios -->
+      <section id="beneficios" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Beneficios</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-green-700 mb-3">Para estudiantes</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>Mejora la fluidez al presentarte y explicar tu jornada.</li>
+              <li>Te prepara para entrevistas y trabajo con equipos internacionales.</li>
+              <li>Conecta el inglés técnico con la programación web.</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-green-700 mb-3">Para el entorno local</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li>Favorece empleabilidad remota desde Berástegui, Lorica y Sahagún.</li>
+              <li>Fortalece proyectos y emprendimientos digitales locales.</li>
+              <li>Impulsa la internacionalización académica y laboral.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Actividades -->
+      <section id="actividades" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Actividades</h2>
+
+        <!-- A1: Quiz 10 preguntas -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Actividad 1 · Cuestionario (10 preguntas)</h3>
+          <div id="quiz10"></div>
+          <button id="quiz10-submit" class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700">Finalizar</button>
+          <div id="quiz10-result" class="mt-3 text-lg font-bold"></div>
+        </div>
+
+        <!-- A2: Completar oraciones -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Actividad 2 · Completa las oraciones</h3>
+          <div id="fillins" class="space-y-3"></div>
+          <button id="fillins-submit" class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700">Verificar</button>
+          <div id="fillins-result" class="mt-3 font-medium"></div>
+        </div>
+
+        <!-- A3: Transformación -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Actividad 3 · Transformación de oraciones</h3>
+          <p class="text-slate-700 mb-3">Escribe la forma <strong>afirmativa</strong>, <strong>negativa</strong> e <strong>interrogativa</strong>.</p>
+          <div id="transform" class="space-y-4"></div>
+          <details class="mt-4">
+            <summary class="cursor-pointer text-green-700 font-semibold">Mostrar respuestas sugeridas</summary>
+            <div id="transform-answers" class="mt-2 text-slate-700"></div>
+          </details>
+        </div>
+
+        <!-- A4: Producción escrita -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-green-700 mb-2">Actividad 4 · Producción escrita: “This is my daily routine”</h3>
+          <p class="text-slate-700 mb-3">Escribe un párrafo (6–8 oraciones) con al menos 2 afirmativas, 2 negativas y 2 interrogativas.</p>
+          <textarea id="writing" rows="6" class="w-full p-3 border rounded-md" placeholder="Ej.: I wake up at 6 a.m. I take a shower..."></textarea>
+          <div class="text-right mt-2 text-sm text-slate-500"><span id="wcount">0</span> caracteres</div>
+        </div>
+      </section>
+
+      <!-- Evaluación -->
+      <section id="evaluacion" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Evaluación sumativa</h2>
+        <p class="text-slate-700 mb-4">Selecciona la opción correcta.</p>
+        <div id="eval"></div>
+        <button id="eval-submit" class="mt-4 bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700">Enviar</button>
+        <div id="eval-result" class="mt-3 text-lg font-bold"></div>
+      </section>
+
+      <!-- Bibliografía -->
+      <section id="lecturas" class="content-pane">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-6">Bibliografía</h2>
+        <ul class="space-y-3 text-slate-700">
+          <li>BBC Learning English. (s.f.). <em>Daily routines and simple present</em>. https://www.bbc.co.uk/learningenglish</li>
+          <li>British Council. (s.f.). <em>Learn English – Present simple</em>. https://learnenglish.britishcouncil.org</li>
+          <li>Flores Kastanis, P. (2016). <em>English 1</em> (2.ª ed.). México: Trillas. Cap. 1 – Daily Routines.</li>
+          <li>Murphy, R. (2019). <em>Essential Grammar in Use</em> (4th ed.). Cambridge University Press.</li>
+          <li>Universidad del Valle. (2022). <em>Manual básico de gramática inglesa para principiantes</em>. Editorial Universidad del Valle.</li>
+        </ul>
+        <p class="text-slate-500 text-sm mt-4">Contextualizado para estudiantes de Berástegui, Lorica y Sahagún.</p>
+      </section>
+
+      <footer class="mt-12 pt-6 border-t-2 border-slate-200 text-center">
+        <p class="text-slate-600 font-medium">Programa: Técnico Profesional en Programación Web · Curso: Inglés Técnico I</p>
+        <p class="text-green-800 font-bold text-lg">Unidad 1: My Routine</p>
+        <p class="text-slate-500 text-sm">© 2025</p>
+      </footer>
+    </main>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  const panes = document.querySelectorAll('.content-pane');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  function switchPane(id){
+    panes.forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    sidebarLinks.forEach(l => l.classList.toggle('active', l.dataset.target===id));
+    if (mobileNav && mobileNav.value !== id) mobileNav.value = id;
+  }
+  sidebarLinks.forEach(link => link.addEventListener('click', e => {e.preventDefault(); switchPane(link.dataset.target);}));
+  if (mobileNav){ mobileNav.addEventListener('change', e => switchPane(e.target.value)); }
+
+  // A1: 10-question quiz
+  const quiz10Data = [
+    {q:"Which sentence is written in the correct present simple form?", o:["She go to work at 8.","She goes to work at 8.","She gone to work at 8.","She going to work at 8."], a:"She goes to work at 8."},
+    {q:"Choose the correct negative sentence.", o:["He don’t like coffee.","He doesn’t likes coffee.","He doesn’t like coffee.","He not like coffee."], a:"He doesn’t like coffee."},
+    {q:"Complete the question: “_____ you start class at 7 a.m.?”", o:["Does","Do","Did","Are"], a:"Do"},
+    {q:"We ______ lunch at 12:30 p.m.", o:["eats","eat","eating","eated"], a:"eat"},
+    {q:"Which is an expression of frequency?", o:["Blue shirt","Take a shower","Always","Eat sandwich"], a:"Always"},
+    {q:"Choose the correct sentence for “They”.", o:["They takes a bus every day.","They taking a bus every day.","They taken a bus every day.","They take a bus every day."], a:"They take a bus every day."},
+    {q:"What does “attend” mean in: I attend class at 8 a.m.?", o:["Salir","Asistir","Dormir","Ignorar"], a:"Asistir"},
+    {q:"Select the sentence that correctly uses “usually”.", o:["Usually I wake up at 6:30.","I get up usually at 6:30.","I usually wake up at 6:30.","I wakes up usually at 6:30."], a:"I usually wake up at 6:30."},
+    {q:"Which is correct in 3rd person?", o:["He study every day.","He studies every day.","He studying every day.","He studied every day."], a:"He studies every day."},
+    {q:"Choose the correct negative in 3rd person.", o:["She doesn’t plays football.","She doesn’t play football.","She not play football.","She don’t play football."], a:"She doesn’t play football."}
+  ];
+  const quiz10El = document.getElementById('quiz10');
+  if (quiz10El){
+    quiz10Data.forEach((item, idx) => {
+      const block = document.createElement('div'); block.className="mb-6";
+      block.innerHTML = `<p class="font-semibold mb-2">${idx+1}. ${item.q}</p>`;
+      const options = document.createElement('div'); options.className="space-y-2";
+      item.o.forEach(opt => {
+        const el = document.createElement('div');
+        el.className = 'quiz-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer';
+        el.textContent = opt;
+        el.addEventListener('click', () => {
+          block.querySelectorAll('.quiz-option').forEach(e => e.classList.remove('selected'));
+          el.classList.add('selected');
+        });
+        options.appendChild(el);
+      });
+      block.appendChild(options);
+      quiz10El.appendChild(block);
+    });
+    document.getElementById('quiz10-submit').addEventListener('click', ()=>{
+      let score=0;
+      const questions = quiz10El.querySelectorAll('.mb-6');
+      questions.forEach((q,i)=>{
+        const sel = q.querySelector('.quiz-option.selected');
+        if (sel && sel.textContent === quiz10Data[i].a) score++;
+      });
+      const r = document.getElementById('quiz10-result');
+      r.textContent = `Tu puntuación es: ${score} de ${quiz10Data.length}.`;
+      r.className = score/quiz10Data.length>=0.7 ? 'mt-3 text-lg font-bold text-green-700':'mt-3 text-lg font-bold text-red-700';
+    });
+  }
+
+  // A2: Fill-ins
+  const fillData = [
+    {q:"She ___ (have) lunch at noon.", a:["has"]},
+    {q:"They ___ (not work) on weekends.", a:["do not work","don't work"]},
+    {q:"Does he ___ (play) video games?", a:["play"]},
+    {q:"I ___ (get up) at 6:30 a.m.", a:["get up"]},
+    {q:"We ___ (not like) cold weather.", a:["do not like","don't like"]}
+  ];
+  const fillEl = document.getElementById('fillins');
+  if (fillEl){
+    fillData.forEach((item, idx)=>{
+      const row = document.createElement('div');
+      row.className = "p-3 border rounded-md";
+      row.innerHTML = `<label class="block mb-1">${idx+1}. ${item.q}</label>
+        <input class="fill-input w-full p-2 border rounded-md" data-answers='${JSON.stringify(item.a)}' placeholder="Escribe tu respuesta...">`;
+      fillEl.appendChild(row);
+    });
+    document.getElementById('fillins-submit').addEventListener('click', ()=>{
+      let ok=0;
+      document.querySelectorAll('.fill-input').forEach(inp=>{
+        const answers = JSON.parse(inp.dataset.answers);
+        const val = inp.value.trim().toLowerCase();
+        const match = answers.some(a => a.toLowerCase()===val);
+        if (match){ ok++; inp.classList.add('border-green-500'); inp.classList.remove('border-red-500'); }
+        else { inp.classList.add('border-red-500'); inp.classList.remove('border-green-500'); }
+      });
+      const out = document.getElementById('fillins-result');
+      out.textContent = `Acertaste ${ok} de ${fillData.length}.`;
+      out.className = ok===fillData.length ? 'mt-3 font-medium text-green-700':'mt-3 font-medium text-red-700';
+    });
+  }
+
+  // A3: Transformations
+  const transformData = [
+    {verb:"work", subject:"They"},
+    {verb:"code", subject:"He"},
+    {verb:"study", subject:"I"},
+    {verb:"check emails", subject:"You"}
+  ];
+  const transformEl = document.getElementById('transform');
+  const ansEl = document.getElementById('transform-answers');
+  if (transformEl && ansEl){
+    const buildRow = (d,i)=>`
+      <div class="p-3 border rounded-md">
+        <p class="font-semibold mb-2">${i+1}. Verbo: <em>${d.verb}</em> · Sujeto: <strong>${d.subject}</strong></p>
+        <div class="grid md:grid-cols-3 gap-3">
+          <input class="w-full p-2 border rounded-md" placeholder="Afirmativa">
+          <input class="w-full p-2 border rounded-md" placeholder="Negativa">
+          <input class="w-full p-2 border rounded-md" placeholder="Interrogativa">
+        </div>
+      </div>`;
+    transformData.forEach((d,i)=> transformEl.insertAdjacentHTML('beforeend', buildRow(d,i)));
+    const answers = [
+      ["They work every day.","They don’t work every day.","Do they work every day?"],
+      ["He codes in the morning.","He doesn’t code in the morning.","Does he code in the morning?"],
+      ["I study at night.","I don’t study at night.","Do I study at night?"],
+      ["You check emails before class.","You don’t check emails before class.","Do you check emails before class?"]
+    ];
+    let html = "<ol class='list-decimal ml-6 space-y-1'>";
+    answers.forEach(a => {
+      html += `<li><span class='block'>A: ${a[0]}</span><span class='block'>N: ${a[1]}</span><span class='block'>I: ${a[2]}</span></li>`;
+    });
+    html += "</ol>";
+    ansEl.innerHTML = html;
+  }
+
+  // Writing counter
+  const writing = document.getElementById('writing');
+  const wcount = document.getElementById('wcount');
+  if (writing && wcount){
+    writing.addEventListener('input', ()=> wcount.textContent = writing.value.length);
+  }
+
+  // Evaluación sumativa (6 preguntas)
+  const evalData = [
+    {q:"El presente simple se usa principalmente para…", o:["Acciones en progreso ahora","Hábitos y rutinas","Eventos del pasado","Planes futuros"], a:"Hábitos y rutinas"},
+    {q:"En 3.ª persona singular, el verbo en presente simple…", o:["No cambia","Añade -ing","Añade -s/-es","Usa was/were"], a:"Añade -s/-es"},
+    {q:"Forma negativa correcta para he/she/it:", o:["do not + verbo","does not + verbo","is not + verbo","was not + verbo"], a:"does not + verbo"},
+    {q:"Interrogativa correcta:", o:["Does she like tea?","She does like tea?","Do she likes tea?","She likes tea?"], a:"Does she like tea?"},
+    {q:"Consonante + y →", o:["-s","-es","-ies","-ing"], a:"-ies"},
+    {q:"Expresión de frecuencia:", o:["quickly","always","blue","breakfast"], a:"always"}
+  ];
+  const evalEl = document.getElementById('eval');
+  if (evalEl){
+    evalData.forEach((item, idx)=>{
+      const block = document.createElement('div'); block.className="mb-6";
+      block.innerHTML = `<p class="font-semibold mb-2">${idx+1}. ${item.q}</p>`;
+      const options = document.createElement('div'); options.className="space-y-2";
+      item.o.forEach(opt => {
+        const el = document.createElement('div');
+        el.className = 'quiz-option p-3 border-2 border-slate-200 rounded-lg cursor-pointer';
+        el.textContent = opt;
+        el.addEventListener('click', () => {
+          block.querySelectorAll('.quiz-option').forEach(e => e.classList.remove('selected'));
+          el.classList.add('selected');
+        });
+        options.appendChild(el);
+      });
+      block.appendChild(options);
+      evalEl.appendChild(block);
+    });
+    document.getElementById('eval-submit').addEventListener('click', ()=>{
+      let score=0;
+      const qs = evalEl.querySelectorAll('.mb-6');
+      qs.forEach((q,i)=>{
+        const sel = q.querySelector('.quiz-option.selected');
+        if (sel && sel.textContent === evalData[i].a) score++;
+      });
+      const r = document.getElementById('eval-result');
+      r.textContent = `Puntaje final: ${score} de ${evalData.length}.`;
+      r.className = score/evalData.length>=0.7 ? 'mt-3 text-lg font-bold text-green-700':'mt-3 text-lg font-bold text-red-700';
+    });
+  }
+});
+</script>
+</body>
+</html>
